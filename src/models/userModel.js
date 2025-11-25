@@ -46,6 +46,7 @@ const UserSchema = new mongoose.Schema({
 	phone: {
 		type: String,
 		unique: true,
+		sparse: true, // Cho phép nhiều giá trị null trong unique index
 	},
 	address: {
 		type: String,
