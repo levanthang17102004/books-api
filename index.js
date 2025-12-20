@@ -34,11 +34,11 @@ app.use(errorMiddleHandle);
 connectDB();
 
 
-app.listen(PORT, (err) => {
+app.listen(PORT, "0.0.0.0", (err) => {
 	if (err) {
 		console.log(err);
 		return;
 	}
 
-	console.log(`Server starting at http://localhost:${PORT}`);
+	console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
